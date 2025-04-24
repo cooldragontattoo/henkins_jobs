@@ -13,8 +13,8 @@ job (jobName) {
     scm {
         git {
             remote {
-                url('https://github.com/cooldragontattoo/henkins_jobs.git')
-                branch('main')
+                url 'https://github.com/cooldragontattoo/henkins_jobs.git'
+                branch 'main'
             }
         }
     }

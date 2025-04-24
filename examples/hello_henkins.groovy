@@ -4,6 +4,7 @@ pipeline {
     }
     agent {
         kubernetes {
+            defaultContainer: 'testing'
         }
 //         kubernetes {
 //             defaultContainer: 'testing'

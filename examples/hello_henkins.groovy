@@ -3,6 +3,8 @@ pipeline {
         skipDefaultCheckout()
     }
     agent {
+        kubernetes {
+        }
 //         kubernetes {
 //             defaultContainer: 'testing'
 //             yaml '''

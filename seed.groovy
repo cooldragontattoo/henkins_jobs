@@ -19,7 +19,6 @@ pipelineJob('examples/hello_henkins') {
                 lightweight()
                 scriptPath('examples/hello_henkins.groovy')
                 }
-            }
         }
     }
 }

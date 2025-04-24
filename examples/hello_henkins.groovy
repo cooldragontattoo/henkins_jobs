@@ -6,6 +6,8 @@ pipeline {
         kubernetes {
             yaml '''
 kind: Pod
+metadata:
+  name: testing
 spec: 
   containers:
   - name: testing

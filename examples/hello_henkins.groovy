@@ -2,7 +2,7 @@ pipeline {
     options {
         skipDefaultCheckout()
     }
-//     agent {
+    agent {
 //         kubernetes {
 //             defaultContainer: 'testing'
 //             yaml '''
@@ -17,7 +17,7 @@ pipeline {
 //     tty: true
 // '''    
 //         }
-//     }
+    }
     stages{
         stage('Greetings') {
             steps {

@@ -2,7 +2,22 @@ pipeline {
     options {
         skipDefaultCheckout()
     }
-//     agent {
+    agent {
+        kubernetes {
+            yaml '''
+kind: Pod
+metadata:
+  name: testing
+spec: 
+  containers:
+  - name: testing
+    image: python:3.8
+    imagePullPolicy: Always
+    command:
+    - cat
+    tty: true
+'''  
+        }
 //         kubernetes {
 //             defaultContainer: 'testing'
 //             yaml '''
@@ -17,7 +32,7 @@ pipeline {
 //     tty: true
 // '''    
 //         }
-//     }
+    }
     stages{
         stage('Greetings') {
             steps {

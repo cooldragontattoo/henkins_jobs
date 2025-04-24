@@ -16,11 +16,11 @@ spec:
     - cat
     tty: true
 '''    }
-        stages{
-            stage('Greetings') {
-                steps {
-                    echo 'Hello Henkins'
-                }
+    }
+    stages{
+        stage('Greetings') {
+            steps {
+                echo 'Hello Henkins'
             }
         }
     }

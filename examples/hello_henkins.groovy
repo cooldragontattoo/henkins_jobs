@@ -15,7 +15,8 @@ spec:
     command:
     - cat
     tty: true
-'''    }
+'''    
+        }
     }
     stages{
         stage('Greetings') {

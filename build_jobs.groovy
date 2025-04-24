@@ -1,6 +1,6 @@
 def jobName = 'build_henkins_jobs'
 
-job (jobName) {
+job(jobName) {
     description('Build Henkins Jobs')
     triggers {
         hudsonStartupTrigger {

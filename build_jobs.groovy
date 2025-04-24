@@ -1,6 +1,15 @@
 def jobName = 'build_henkins_jobs'
 
 job(jobName) {
+    description('Build Jenkins Jobs')
+        triggers {
+            hudsonStartupTrigger{
+                nodeParameterName("")
+                label("")
+                quietPeriod("0")
+                runOnChoice("False")
+            }
+        }
     scm {
         git {
             remote {

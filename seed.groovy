@@ -7,7 +7,7 @@ folder('examples') {
 pipelineJob('examples/hello_henkins') {
     displayName('Hello Henkins')
     description('A simple job that says hello.')
-    defintion{
+    definition{
         cpsScm {
             scm{
                 git {

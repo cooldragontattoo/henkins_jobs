@@ -22,3 +22,23 @@ pipelineJob('examples/hello_henkins') {
         }
     }
 }
+
+
+pipelineJob('examples/random_fruit') {
+    displayName('Random Fruit')
+    description('A simple job that generates a random fruit.')
+    definition{
+        cpsScm {
+            scm{
+                git {
+                    remote {
+                        url('https://github.com/cooldragontattoo/henkins_jobs.git')
+                    }
+                    branch('*/main')
+                }
+                lightweight()
+                scriptPath('examples/random_fruit.groovy')
+                }
+        }
+    }
+}

@@ -47,6 +47,25 @@ pipelineJob('examples/random_fruit') {
     }
 }
 
+pipelineJob('examples/sleep_henkins') {
+    displayName('Sleepy Time')
+    description('A simple job that sleeps for an hour.')
+    definition{
+        cpsScm {
+            scm{
+                git {
+                    remote {
+                        url('https://github.com/cooldragontattoo/henkins_jobs.git')
+                    }
+                    branch('*/main')
+                }
+                lightweight()
+                scriptPath('examples/sleep_henkins.groovy')
+                }
+        }
+    }
+}
+
 pipelineJob('k8s/test_k8s') {
     displayName('Test K8s')
     description('A simple job that gets the pods for the jenkins namespace  .')

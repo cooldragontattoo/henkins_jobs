@@ -1,3 +1,5 @@
+@Library('Henkins Shared Library') _
+
 pipeline {
     options {
         skipDefaultCheckout()
@@ -10,6 +12,13 @@ pipeline {
         stage('Greetings') {
             steps {
                 echo 'Hello Henkins'
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                kubeMetrics() // from the Henkins Shared Library
             }
         }
     }

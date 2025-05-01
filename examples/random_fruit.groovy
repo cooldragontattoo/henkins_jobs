@@ -9,12 +9,19 @@ pipeline {
         }
     }
     stages{
-        stage('Random Word') {
+        stage('Random Fruit') {
             steps {
                 script {
-                def fruit = randomFruit()
+                def fruit = randomFruit() // from the Henkins Shared Library
                 echo "Random fruit: ${fruit}"
                 }
+            }
+        }
+    }
+    post {
+        always {
+            script {
+                kubeMetrics() // from the Henkins Shared Library
             }
         }
     }
